@@ -197,7 +197,7 @@ Mejoró 2 puntos respecto a no tener nada, pero mejoró más significativamente 
 
 - ¿Qué combinación de regularizadores dio mejores resultados en tus pruebas?
 
-La combinación de BatchNorm + L2 (weight decay) fue la que produjo la mejor generalización: aunque el accuracy de entrenamiento cayó, la pérdida y el accuracy en validación mejoraron respecto al modelo base.
+La combinación de BatchNorm + L2 (weight decay) fue la que produjo la mejor generalización: aunque el accuracy de entrenamiento cayó, la pérdida y el accuracy en validación mejoraron respecto al modelo base. 
 
 - ¿Notaste cambios en la loss de entrenamiento al usar `BatchNorm`?
 
@@ -269,3 +269,13 @@ Es claro que el modelo tiene mejor precisión cuando es inicializado con He, lue
 - ¿Por qué `bias` se suele inicializar en cero?
 
 Es un punto de partida simple y claro, y no tiene el problema de la simetría porque los pesos están inicializados en valores != 0.
+
+##9. Búsqueda de HP
+
+Hay un factor muy importante en la búsqueda de HP que es estadístico. No puedo computar todas las opciones posibles, por lo que solo puedo mostrar la mejor opción de las que se computaron. Sin lugar a dudas, con una computadora con GPU y más tiempo, podría probar más opciones para determinar la combinación óptima de HP. 
+
+MLP:
+La combinación de HP que mejor resultados obtuvo en la MLP fue 'input_size': 32, 'batch_size': 32, 'lr': 0.0001, 'epochs': 100, 'optimizer': 'Adam', 'HFlip': 0.0, 'VFlip': 0.0, 'RBContrast': 0.0, 'loss_fn': 'CrossEntropyLoss', 'es_patience': 5, 'dropout': 0.3, 'count_params': 1640201}
+
+CNN:
+La combinación de HP que mejor resultados obtuvo en la CNN fue
