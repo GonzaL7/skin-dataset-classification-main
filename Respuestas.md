@@ -275,7 +275,9 @@ Es un punto de partida simple y claro, y no tiene el problema de la simetría po
 Hay un factor muy importante en la búsqueda de HP que es estadístico. No puedo computar todas las opciones posibles, por lo que solo puedo mostrar la mejor opción de las que se computaron. Sin lugar a dudas, con una computadora con GPU y más tiempo, podría probar más opciones para determinar la combinación óptima de HP. 
 
 MLP:
-La combinación de HP que mejor resultados obtuvo en la MLP fue 'input_size': 32, 'batch_size': 32, 'lr': 0.0001, 'epochs': 100, 'optimizer': 'Adam', 'HFlip': 0.0, 'VFlip': 0.0, 'RBContrast': 0.0, 'loss_fn': 'CrossEntropyLoss', 'es_patience': 5, 'dropout': 0.3, 'count_params': 1640201}
+La combinación de HP que mejor resultados obtuvo en la MLP fue 'input_size': 32, 'batch_size': 32, 'lr': 0.0001, 'epochs': 100, 'optimizer': 'Adam', 'HFlip': 0.0, 'VFlip': 0.0, 'RBContrast': 0.0, 'loss_fn': 'CrossEntropyLoss', 'es_patience': 5, 'dropout': 0.3, 'count_params': 1640201} Acc: 66.1%
 
 CNN:
-La combinación de HP que mejor resultados obtuvo en la CNN fue
+La combinación de HP que mejor resultados obtuvo en la CNN fue 'input_size': 32, 'batch_size': 32, 'lr': 0.001, 'epochs': 80, 'optimizer': 'Adam', 'HFlip': 0.5, 'VFlip': 0.0, 'RBContrast': 0.0, 'loss_fn': 'CrossEntropyLoss', 'es_patience': 8, 'dropout': 0.3, 'count_params': 268521} Acc: 67.78%
+
+Queda claro por la variación de los puntajes de cada modelo que es importante elegir correctamente los hiperparámetros, y que no es óptimo correr los modelos aleatoriamente, ya que estamos viendo solo el 5-7% de los modelos posibles. Una mejora que me interesa investigar es un algoritmo de selección de hiperparámetros que intente maximizar la precisión o algún otro indicador como el F1-score, para erradicar lo máximo posible la aleatoreidad.
