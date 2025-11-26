@@ -23,7 +23,7 @@ Necesitamos ToTensorV2() porque PyTorch solo acepta tensores en formato CHW. Alb
 ## 2. Arquitectura del Modelo
 - ¿Por qué usamos una red MLP en lugar de una CNN aquí? ¿Qué limitaciones tiene?
 
-Se usa MLP para tener un modelo simple y baseline, pero es limitado porque no aprovecha la estructura espacial de la imagen y escala muy mal. Una CNN es mucho mejor para imágenes y usa muchos menos parámetros.
+Se usa MLP para tener un modelo simple y baseline (inicial), pero es limitado porque no aprovecha la estructura espacial de la imagen y escala muy mal. Una CNN es mucho mejor para imágenes y usa muchos menos parámetros.
 
 - ¿Qué hace la capa `Flatten()` al principio de la red?
 
