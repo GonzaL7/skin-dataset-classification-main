@@ -127,7 +127,7 @@ Regularización es el conjunto de técnicas usadas para reducir el overfitting y
 
 - ¿Cuál es la diferencia entre `Dropout` y regularización `L2` (weight decay)?
 
-Dropout elimina neuronas aleatoriamente para evitar co-adaptación, mientras que L2 penaliza pesos grandes para suavizar el modelo. Son regularizadores complementarios.
+Dropout elimina neuronas aleatoriamente para que cada neurona tenga que aprender de manera más independiente, mientras que L2 penaliza pesos grandes para suavizar el modelo. Son regularizadores complementarios.
 
 - ¿Qué es `BatchNorm` y cómo ayuda a estabilizar el entrenamiento?
 
